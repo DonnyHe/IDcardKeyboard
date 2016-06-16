@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hjy.idcardkeyboard.activity.MainActivity">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edtNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:digits="0123456789xX"
+        android:hint="请输入身份证号"
+        android:inputType="number"
+        android:textSize="20sp"
+        android:singleLine="true"
+        app:met_floatingLabel="highlight"
+        app:met_maxCharacters="18"
+        app:met_minCharacters="15"
+        app:met_primaryColor="?colorAccent"
+        app:met_underlineColor="?colorAccent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:gravity="bottom">
+
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/customKeyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:shadowRadius="1.0" />
+    </RelativeLayout>
+</LinearLayout>
